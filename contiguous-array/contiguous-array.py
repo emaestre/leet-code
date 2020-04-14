@@ -15,4 +15,4 @@ class Solution:
             else:
                 dir[count] = i
             
-        return maxlen;
+        return maxlen
