@@ -1,4 +1,4 @@
-# roduct of Array Except Self
+# Product of Array Except Self
 
 ## [Problem link](https://leetcode.com/problems/product-of-array-except-self/)
 
