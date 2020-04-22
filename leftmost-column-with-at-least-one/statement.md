@@ -1,29 +1,53 @@
-# Number of Islands
+# Leftmost Column with at Least a One
 
-## [Problem link](https://leetcode.com/problems/number-of-islands/)
+## [Problem link](https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/530/week-3/3306/)
 
-Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+(This problem is an interactive problem.)
+
+A binary matrix means that all elements are 0 or 1. For each individual row of the matrix, this row is sorted in non-decreasing order.
+
+Given a row-sorted binary matrix binaryMatrix, return leftmost column index(0-indexed) with at least a 1 in it. If such index doesn't exist, return -1.
+
+You can't access the Binary Matrix directly.  You may only access the matrix using a BinaryMatrix interface:
+
+BinaryMatrix.get(x, y) returns the element of the matrix at index (x, y) (0-indexed).
+BinaryMatrix.dimensions() returns a list of 2 elements [m, n], which means the matrix is m * n.
+Submissions making more than 1000 calls to BinaryMatrix.get will be judged Wrong Answer.  Also, any solutions that attempt to circumvent the judge will result in disqualification.
+
+For custom testing purposes you're given the binary matrix mat as input in the following four examples. You will not have access the binary matrix directly.
 
 - Example 1:
 
 ```js
-Input:
-11110
-11010
-11000
-00000
-
-Output: 1
+Input: mat = [[0,0],[1,1]]
+Output: 0
 ```
 
 - Example 2:
-  
-```js
-Input:
-11000
-11000
-00100
-00011
 
-Output: 3
+```js
+Input: mat = [[0,0],[0,1]]
+Output: 1
 ```
+
+- Example 3:
+
+```js
+Input: mat = [[0,0],[0,0]]
+Output: -1
+```
+
+- Example 4:
+
+```js
+Input: mat = [[0,0,0,1],[0,0,1,1],[0,1,1,1]]
+Output: 1
+ ```
+
+**Constraints:**
+
+`m == mat.length`  
+`n == mat[i].length`  
+`1 <= m, n <= 100`  
+`mat[i][j] is either 0 or 1.`  
+`mat[i] is sorted in a non-decreasing way.`  
